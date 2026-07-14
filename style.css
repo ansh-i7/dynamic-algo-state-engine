@@ -1,0 +1,80 @@
+
+/*Basic dark theme of the page and just a lil css baby for the header and subtitle*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    margin-top: 40px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    color: #888;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+/* lil styling for control panel buttons */
+.controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+button {
+    background-color: #259ceb;
+    color: white;
+    border: none;
+    padding: 9px 15px;
+    font-size: 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #1d6ed8;
+}
+
+/* Ts Data Canvas (Crucial for the visualizer that gonna appear later) */
+
+.container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* This forces the bars to stick to the bottom */
+    height: 400px;
+    width: 80vw;
+    max-width: 1000px;
+    border-bottom: 2px solid #333;
+}
+
+.bar {    /*might change the style later if it aint fw me*/
+    width: 15px;
+    margin: 0 2px;
+    background-color: #3b82f6; /* Default Blue bbg*/
+    border-radius: 4px 4px 0 0; /* Rounded top edges */
+}
+
+
+
