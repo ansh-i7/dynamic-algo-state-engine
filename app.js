@@ -1,5 +1,6 @@
 const container = document.getElementById('visualizer-container');
 const generateBtn = document.getElementById('generate-btn');
+const sortBtn = document.getElementById('sort-btn');
 
 function generateArray(size = 30) {
     container.innerHTML = ''; 
@@ -22,3 +23,7 @@ generateBtn.addEventListener('click', () => {
 });
 
 generateArray();
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
