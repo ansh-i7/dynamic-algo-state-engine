@@ -36,6 +36,11 @@ async function bubbleSort(){
    for(let i = 0 ;i < bars.length; ++i){
     for(let j = 0; j < bars.length - i - 1; ++j){
 
+        bars[j].style.backgroundColor = '#ef4444';
+        bars[j + 1].style.backgroundColor = '#ef4444';
+
+        await sleep(35); 
+
         const height1 = parseInt(bars[j].style.height);
         const height2 = parseInt(bars[j+1].style.height);
 
@@ -43,9 +48,13 @@ async function bubbleSort(){
             bars[j].style.height = `${height2}px`;
             bars[j+1].style.height = `${height1}px`;
         }
+        
+        bars[j].style.backgroundColor = '#3b82f6';
+        bars[j + 1].style.backgroundColor = '#3b82f6';
 
-        await sleep(30);      //Pause execution of sorting for 30 ms for human eye to recognize the changes on the screen
     }
+
+    bars[bars.length - i - 1].style.backgroundColor = '#10b981';
    }
 }
 

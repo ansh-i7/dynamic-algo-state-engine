@@ -73,7 +73,7 @@ button:hover {
     width: 15px;
     margin: 0 2px;
     background-color: #3b82f6; /* Default Blue bbg*/
-    border-radius: 4px 4px 0 0; /* Rounded top edges */
+    border-radius: 4px 4px 0 0;
 }
 
 
