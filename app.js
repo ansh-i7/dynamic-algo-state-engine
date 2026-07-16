@@ -2,10 +2,18 @@ const container = document.getElementById('visualizer-container');
 const generateBtn = document.getElementById('generate-btn');
 const sortBtn = document.getElementById('sort-btn');
 
+const sizeSlider = document.getElementById('size-slider');
+const speedSlider = document.getElementById('speed-slider');
+
+let delay = 50; //ms
+
 /* array generation */
 function generateArray(size = 30) {
+
     container.innerHTML = ''; 
     const array = [];
+
+    const barWidth = `${100 / size}%`;
 
     for (let i = 0; i < size; i++) {
         const heightValue = Math.floor(Math.random() * 360) + 20;
@@ -15,15 +23,26 @@ function generateArray(size = 30) {
         bar.classList.add('bar'); 
         bar.style.height = `${heightValue}px`;
 
+        bar.style.width = barWidth;
+        bar.style.margin = '0 1px';
+
         container.appendChild(bar);
     }
 }
 
 generateBtn.addEventListener('click', () => {
-    generateArray();
+    generateArray(sizeSlider.value);
 });
 
-generateArray();
+sizeSlider.addEventListener('input', (e) => {
+    generateArray(e.target.value);
+});
+
+speedSlider.addEventListener('input', (e) => {  
+    delay = 121 - e.target.value;
+});
+
+generateArray(sizeSlider.value);
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -39,7 +58,7 @@ async function bubbleSort(){
         bars[j].style.backgroundColor = '#ef4444';
         bars[j + 1].style.backgroundColor = '#ef4444';
 
-        await sleep(35); 
+        await sleep(delay); 
 
         const height1 = parseInt(bars[j].style.height);
         const height2 = parseInt(bars[j+1].style.height);
@@ -56,6 +75,7 @@ async function bubbleSort(){
 
     bars[bars.length - i - 1].style.backgroundColor = '#10b981';
    }
+    bars[0].style.backgroundColor = '#10b981';
 }
 
 sortBtn.addEventListener('click' , async () => {

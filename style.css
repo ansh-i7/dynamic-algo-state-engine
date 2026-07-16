@@ -92,8 +92,6 @@ input[type="range"]:disabled {
 }
 
 .bar {    /*might change the style later if it aint fw me*/
-    width: 15px;
-    margin: 0 2px;
     background-color: #3b82f6; /* Default Blue bbg*/
     border-radius: 4px 4px 0 0;
 }
