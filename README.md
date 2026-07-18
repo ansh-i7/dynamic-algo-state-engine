@@ -1,6 +1,6 @@
-# DASE: Dynamic Algo State Engine
+# Algo Visual Flow
 
-DASE is an interactive, event-driven sorting algorithm visualizer built to demonstrate the manipulation of the JavaScript Event Loop, asynchronous execution, and dynamic DOM rendering.
+Algo visual flow is an interactive, event-driven sorting algorithm visualizer built to demonstrate the manipulation of the JavaScript Event Loop, asynchronous execution, and dynamic DOM rendering.
 
 ---
 
@@ -57,13 +57,13 @@ Bridged synchronous algorithmic logic (Bubble Sort) with asynchronous browser re
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/dynamic-algo-state-engine.git
+git clone https://github.com/YOUR_USERNAME/algo-visual-flow.git
 ```
 
 ### 2. Navigate into the Project
 
 ```bash
-cd dynamic-algo-state-engine
+cd algo-visual-flow
 ```
 
 ### 3. Open in VS Code
